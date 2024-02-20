@@ -1,0 +1,32 @@
+.container
+{
+    margin-top:80px;
+    margin-left: 300px;
+    
+}
+.tab {
+    width: 250px !important;
+   
+  box-sizing: border-box;
+  margin-left: 420px;
+  height: 150px;
+  overflow-x: auto;
+  overflow-y: auto;
+  }
+  .ser
+  {
+    margin-left: 100px;
+    display: inline-flex;
+  }
+  button
+  {
+   background-color: coral;
+   border-style: outset;
+  }
+  .but
+  {
+    margin-top:100px;
+    margin-left:280px;
+    
+  }
+

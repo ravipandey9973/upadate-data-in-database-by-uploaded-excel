@@ -1,0 +1,36 @@
+<div class="container ">
+    <input type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" >
+    <button mat-raised-button   (click)="uploadFile()" >Upload </button>
+   
+    <div class="ser">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Search Column" [(ngModel)]="searchTerm" (input)="searchColumn()">
+    </mat-form-field>
+  </div>
+  <div class="tab">
+    <mat-table *ngIf="isUploaded" [dataSource]="dataSource">
+      <!-- Display "metricid" column -->
+    <!-- Inside the mat-table in the template -->
+
+<ng-container *ngFor="let column of allColumns" [matColumnDef]="column">
+ 
+  <mat-cell *matCellDef="let element">{{ element[column] }}</mat-cell>
+</ng-container>
+
+
+<mat-row *matRowDef="let row; columns: allColumns;" (click)="selectRow(row)"></mat-row>
+
+    </mat-table>
+    
+    
+   
+  </div>
+  <div class="but"  >
+   
+    <button  (click)="updateTable()">Update</button>
+  </div>
+
+
+ 
+  </div>
+  
